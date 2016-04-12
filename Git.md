@@ -10,6 +10,13 @@ Spin up a local repository to track an existing project
 
 Initialize a new repository
 ```
+git init
+```
+
+If using a local repository to initialize a remote repository,
+```
+git remote add origin <repo url>
+git push -u origin master
 ```
 
 Set or change the upstream for a repository. This is useful when providing the initial push to a new empty upstream repository.
