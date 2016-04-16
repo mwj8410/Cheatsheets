@@ -21,6 +21,8 @@ git push -u origin master
 
 Set or change the upstream for a repository. This is useful when providing the initial push to a new empty upstream repository.
 ```
+git remote rm origin
+git remote add origin <new uri>
 ```
 
 
@@ -63,15 +65,19 @@ git fetch origin
 git reset --hard origin/master
 ```
 
-Merge a branch into the current active branch
+Merge a branch1 into branch2
 ```
+git checkout <branch 1>
+git pull
+git checkout <branch 2>
+git merge <branch 1>
 ```
 
 Merge a branch into the current active branch as 1 commit. This is useful for feature branches, where the individual commits only make sense while working on that feature and will loose meaning and add complication to the historic log. The following sequence ensures that 'feature' is fully up-to-date with 'develop' before attempting to make changes to develop.
 ```
 git checkout feature
-git merge develop
-git checkout develop
+git merge development
+git checkout development
 git merge --squash feature
 ```
 
@@ -80,4 +86,19 @@ Squash a series of commits within a branch into a single commit.
 git rest --soft HEAD~<number of commits>
 git commit -m "action(area) message"
 git push --force
+```
+
+View how a branch relates to the remote
+```
+git remote show origin
+```
+
+To change the upstream for a local branch
+```
+git branch --set-upstream-to=origin/<remote branch>
+```
+
+Merge a remote branch
+```
+git push origin --delete <branchName>
 ```
