@@ -73,21 +73,6 @@ git checkout <branch 2>
 git merge <branch 1>
 ```
 
-Merge a branch into the current active branch as 1 commit. This is useful for feature branches, where the individual commits only make sense while working on that feature and will loose meaning and add complication to the historic log. The following sequence ensures that 'feature' is fully up-to-date with 'develop' before attempting to make changes to develop.
-```
-git checkout feature
-git merge development
-git checkout development
-git merge --squash feature
-```
-
-Squash a series of commits within a branch into a single commit.
-```
-git rest --soft HEAD~<number of commits>
-git commit -m "action(area) message"
-git push --force
-```
-
 View how a branch relates to the remote
 ```
 git remote show origin
@@ -101,4 +86,21 @@ git branch --set-upstream-to=origin/<remote branch>
 Merge a remote branch
 ```
 git push origin --delete <branchName>
+```
+
+## Advanced Branch Operation
+
+Merge a branch into the current active branch as 1 commit. This is useful for feature branches, where the individual commits only make sense while working on that feature and will loose meaning and add complication to the historic log. The following sequence ensures that 'feature' is fully up-to-date with 'develop' before attempting to make changes to develop.
+```
+git checkout feature
+git merge development
+git checkout development
+git merge --squash feature
+```
+
+Squash a series of commits within a branch into a single commit.
+```
+git rest --soft HEAD~<number of commits>
+git commit -m "action(area) message"
+git push --force
 ```
