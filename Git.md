@@ -46,6 +46,11 @@ Undo all local changes and reset to local repository to the state of the remote 
 
 ## Branch Operations
 
+Create a new local branch and switch to it
+```
+git checkout -b <branch name>
+```
+
 Show or list branches that are remote, then list all branches that are local or remote.
 ```
 git branch -r
