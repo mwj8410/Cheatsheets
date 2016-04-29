@@ -28,6 +28,15 @@ git remote add origin <new uri>
 
 ## Every-Day Actions
 
+Commit changes
+```
+git commit -m "<message>"
+```
+
+```
+git commit -m "<message>" -m "<second message"
+```
+
 Hold onto changes without committing, and pull changes
 ```
 git stash
