@@ -51,6 +51,7 @@ git reset --hard
 
 Undo all local changes and reset to local repository to the state of the remote repository (applies only to current branch).
 ```
+git reset --hard origin/<branch>
 ```
 
 ## Branch Operations
