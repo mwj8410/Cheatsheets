@@ -13,6 +13,11 @@ Initialize a new repository
 git init
 ```
 
+Git clone
+```
+git clone <repo uri>
+```
+
 If using a local repository to initialize a remote repository,
 ```
 git remote add origin <repo url>
