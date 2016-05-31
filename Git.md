@@ -124,3 +124,8 @@ git rest --soft HEAD~<number of commits>
 git commit -m "action(area) message"
 git push --force
 ```
+
+Delete all merged local branches
+```
+git branch --merged | grep -v "\*" | xargs -n 1 git branch -d
+```
