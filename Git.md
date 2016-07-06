@@ -4,8 +4,9 @@
 
 ## Repository Configuration
 
-Spin up a local repository to track an existing project
+Spin up a local repository to track an existing project, or  reset an existing repository to track a different remote location
 ```
+git remote set-url origin <new uri>
 ```
 
 Initialize a new repository
@@ -29,7 +30,6 @@ Set or change the upstream for a repository. This is useful when providing the i
 git remote rm origin
 git remote add origin <new uri>
 ```
-
 
 ## Every-Day Actions
 
