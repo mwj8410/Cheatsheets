@@ -129,3 +129,10 @@ Delete all merged local branches
 ```
 git branch --merged | grep -v "\*" | xargs -n 1 git branch -d
 ```
+
+
+Increment the version number of a node application with NPM and commit as new version
+```
+npm version patch
+git push origin master --tags
+```
