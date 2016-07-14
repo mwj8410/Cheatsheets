@@ -130,6 +130,12 @@ Delete all merged local branches
 git branch --merged | grep -v "\*" | xargs -n 1 git branch -d
 ```
 
+Delete all local branches not in origin (verify)
+```
+git remote prune origin --dry-run
+git remote prune origin
+```
+
 
 Increment the version number of a node application with NPM and commit as new version
 ```
