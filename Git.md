@@ -108,6 +108,11 @@ Merge a remote branch
 git push origin --delete <branchName>
 ```
 
+Remove a local branch
+```
+git branch -d feature/login
+```
+
 ## Advanced Branch Operation
 
 Merge a branch into the current active branch as 1 commit. This is useful for feature branches, where the individual commits only make sense while working on that feature and will loose meaning and add complication to the historic log. The following sequence ensures that 'feature' is fully up-to-date with 'develop' before attempting to make changes to develop.
