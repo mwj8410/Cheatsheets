@@ -103,6 +103,11 @@ To change the upstream for a local branch
 git branch --set-upstream-to=origin/<remote branch>
 ```
 
+Rename a local branch
+```
+git branch -m <oldname> <newname>
+```
+
 Merge a remote branch
 ```
 git push origin --delete <branchName>
