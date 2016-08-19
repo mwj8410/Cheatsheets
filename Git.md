@@ -108,14 +108,19 @@ Rename a local branch
 git branch -m <oldname> <newname>
 ```
 
-Merge a remote branch
+Remove a remote branch
 ```
 git push origin --delete <branchName>
 ```
 
 Remove a local branch
 ```
-git branch -d feature/login
+git branch -d <branchName>
+```
+
+Remove a local branch that has not been merged
+```
+git branch -D <branchName>
 ```
 
 ## Advanced Branch Operation
