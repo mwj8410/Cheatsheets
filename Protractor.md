@@ -2,6 +2,11 @@
 
 ## Browser Control
 
+Sleep for an amount of time
+```
+browser.driver.sleep(10000);
+```
+
 ## DOM and HTML
 
 Retrieve an element's DOM structure
