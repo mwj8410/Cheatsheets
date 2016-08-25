@@ -10,6 +10,11 @@ browser.wait(
 );
 ```
 
+Reload
+```
+browser.driver.navigate().refresh();
+```
+
 Sleep for an amount of time
 ```
 browser.driver.sleep(10000);
