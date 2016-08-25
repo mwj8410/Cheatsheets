@@ -2,6 +2,14 @@
 
 ## Browser Control
 
+Wait for condition. This is very useful when navigating between views or allowing the view to update with API interaction.
+
+```
+browser.wait(
+  () => element(by.css('css-selector')).isPresent()
+);
+```
+
 Sleep for an amount of time
 ```
 browser.driver.sleep(10000);
