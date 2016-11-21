@@ -93,8 +93,8 @@ git checkout <branch 2>
 git merge <branch 1>
 ```
 
-Merge a single frile from one branch into the current active branch
-this is useful when both branches requre the same change but final merge order cannot be anticipated.
+Merge a single frile from one branch into the current active branch.
+(This is useful when both branches requre the same change but final merge order cannot be anticipated.)
 ```
 git checkout --patch <branch name> <file path>
 ```
