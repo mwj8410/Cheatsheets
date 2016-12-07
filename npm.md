@@ -10,5 +10,6 @@ git pull
 npm version patch
 git push origin master
 git push origin <tag name>
+npm publish
 ```
 *<tag name>* will correspond to the version reported by NPM after `npm version patch`
