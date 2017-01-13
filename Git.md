@@ -157,6 +157,11 @@ git remote prune origin --dry-run
 git remote prune origin
 ```
 
+Wipe all branches except master and development branches
+```
+git branch | egrep -v "(master|\*)" | xargs git branch -D
+```
+
 
 Increment the version number of a node application with NPM and commit as new version
 ```
