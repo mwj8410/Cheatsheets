@@ -141,7 +141,7 @@ git merge --squash feature
 
 Squash a series of commits within a branch into a single commit.
 ```
-git rest --soft HEAD~<number of commits>
+git reset --soft HEAD~<number of commits>
 git commit -m "action(area) message"
 git push --force
 ```
