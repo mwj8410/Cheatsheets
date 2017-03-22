@@ -1,8 +1,8 @@
-# Git Cheat-Sheet
+# Git Cheat-Sheet #
 
-## Setup
+## Setup ##
 
-## Repository Configuration
+## Repository Configuration ##
 
 Spin up a local repository to track an existing project, or  reset an existing repository to track a different remote location
 ```
@@ -31,7 +31,7 @@ git remote rm origin
 git remote add origin <new uri>
 ```
 
-## Every-Day Actions
+## Every-Day Actions ##
 
 Commit changes
 ```
@@ -59,7 +59,7 @@ Undo all local changes and reset to local repository to the state of the remote 
 git reset --hard origin/<branch>
 ```
 
-## Branch Operations
+## Branch Operations ##
 
 Create a new local branch and switch to it
 ```
@@ -129,7 +129,7 @@ Remove a local branch that has not been merged
 git branch -D <branchName>
 ```
 
-## Advanced Branch Operation
+## Advanced Branch Operation ##
 
 Merge a branch into the current active branch as 1 commit. This is useful for feature branches, where the individual commits only make sense while working on that feature and will loose meaning and add complication to the historic log. The following sequence ensures that 'feature' is fully up-to-date with 'develop' before attempting to make changes to develop.
 ```
@@ -139,11 +139,16 @@ git checkout development
 git merge --squash feature
 ```
 
-Squash a series of commits within a branch into a single commit.
+Squash a series of commits within a branch into a single commit. (This is not a git Squash)
 ```
 git reset --soft HEAD~<number of commits>
 git commit -m "action(area) message"
 git push --force
+```
+
+Retrieve a single commit from a different branch into the current working copy. (Note that there is no need to specify which branch the commit is from)
+```
+git cherry-pick <commit hash id>
 ```
 
 Delete all merged local branches
