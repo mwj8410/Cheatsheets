@@ -146,6 +146,11 @@ git commit -m "action(area) message"
 git push --force
 ```
 
+Count the number of commits in a branch as compared to another branch. Example assumes comparing current working branch to development.
+```
+git rev-list --count HEAD ^development
+```
+
 Retrieve a single commit from a different branch into the current working copy. (Note that there is no need to specify which branch the commit is from)
 ```
 git cherry-pick <commit hash id>
