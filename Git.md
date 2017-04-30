@@ -2,6 +2,12 @@
 
 ## Setup ##
 
+```
+git config --global user.name "John Doe"
+git config --global user.email johndoe@email.com
+git config --global credential.helper cache
+```
+
 ## Repository Configuration ##
 
 Spin up a local repository to track an existing project, or  reset an existing repository to track a different remote location
