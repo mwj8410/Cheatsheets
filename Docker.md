@@ -8,6 +8,12 @@
 #### List Local Images ####
 `docker images`
 
+#### Clean Local Images ####
+```
+docker rm -v $(docker ps -a -q -f status=exited) 2>&1
+docker rmi $(docker images -f "dangling=true" -q) 2>&1
+```
+
 #### Run Image ####
 `docker run --name <instance_name> --link <required service> --env-file ./.env.list -i -t -p 1337 <image_name>`
 
