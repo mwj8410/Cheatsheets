@@ -184,3 +184,13 @@ Increment the version number of a node application with NPM and commit as new ve
 npm version patch
 git push origin master --tags
 ```
+
+Create a new project that uses another project as a seed
+```
+git clone -o seed <seed repo uri> <new project directory>
+git rev-list --count HEAD
+git reset --sfot HEAD~<rev list output minus 1>
+git add .
+git commit -m "chore(seed)"
+```
+This pulls the specified repo under the new name, then removes the development history for the seed repo from the newly created repo. Using `git remote` you will see the `seed` entry. Changes fron the remote seed project will not be fetchable. This process could use some mo re attention.
