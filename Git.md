@@ -191,6 +191,7 @@ git clone -o seed <seed repo uri> <new project directory>
 git rev-list --count HEAD
 git reset --sfot HEAD~<rev list output minus 1>
 git add .
+git remote rm seed
 git commit -m "chore(seed)"
 ```
-This pulls the specified repo under the new name, then removes the development history for the seed repo from the newly created repo. Using `git remote` you will see the `seed` entry. Changes fron the remote seed project will not be fetchable. This process could use some mo re attention.
+This pulls the specified repo under the new name, then removes the development history for the seed repo from the newly created repo. Then removes the seed repo from the current repo so changes in the new project will not affect the seed project.
