@@ -65,6 +65,27 @@ Undo all local changes and reset to local repository to the state of the remote 
 git reset --hard origin/<branch>
 ```
 
+## Advanced Repo Operations ##
+Stop tracking changes to a file
+```
+git update-index --assume-unchanged <file>
+```
+
+List all tracked files
+```
+git ls-files -v
+```
+
+List all untracked files
+```
+git ls-files . --ignored --exclude-standard --others
+```
+
+Remove a file from tracking
+```
+git rm --cached filename
+```
+
 ## Branch Operations ##
 
 Create a new local branch and switch to it
