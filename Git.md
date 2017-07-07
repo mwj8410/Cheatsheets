@@ -216,3 +216,12 @@ git remote rm seed
 git commit -m "chore(seed)"
 ```
 This pulls the specified repo under the new name, then removes the development history for the seed repo from the newly created repo. Then removes the seed repo from the current repo so changes in the new project will not affect the seed project.
+
+Alternative way
+```
+git clone -o seed <seed repo uri> <new project directory>
+rm -rf .git
+git init
+git add .
+git commit -m "chore(): seed project"
+```
