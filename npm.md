@@ -13,3 +13,12 @@ git push origin <tag name>
 npm publish
 ```
 *<tag name>* will correspond to the version reported by NPM after `npm version patch`
+
+## NVM ##
+Althought not actually part of npm, I find this to be commonly useful while also working with NPM.
+
+Install and use a specific version by default (fairly common to need to do when working with new versions)
+```
+nvm install v8.5.0
+nvm alias default v8.5.0
+```
