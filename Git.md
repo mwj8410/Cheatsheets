@@ -8,6 +8,11 @@ git config --global user.email johndoe@email.com
 git config --global credential.helper cache
 ```
 
+View current global config
+```
+git config --list
+```
+
 ## Repository Configuration ##
 
 Spin up a local repository to track an existing project, or  reset an existing repository to track a different remote location
