@@ -9,7 +9,7 @@
 `docker images`
 
 #### Clean Local Images ####
-```
+```bash
 docker rm -v $(docker ps -a -q -f status=exited) 2>&1
 docker rmi $(docker images -f "dangling=true" -q) 2>&1
 ```
@@ -21,3 +21,6 @@ docker rmi $(docker images -f "dangling=true" -q) 2>&1
 
 #### Cannot connect to the Docker daemon. Is the docker daemon running on this host? ####
 run `eval "$(docker-machine env default)"`
+
+#### Kill all containers ####
+`docker rm -f $(docker ps -a -q)`
