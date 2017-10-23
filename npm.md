@@ -1,6 +1,13 @@
 # NPM
 This is specifically for working with NPM in a git repo
 
+## Interacting with Packages
+```bash
+npm home <package name>
+
+npm repo <package name>
+npm issues <package name>
+```
 
 ## Version Publishing
 (This assumes that the master branch is the release branch.)
