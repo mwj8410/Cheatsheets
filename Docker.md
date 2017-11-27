@@ -10,8 +10,8 @@
 
 #### Clean Local Images ####
 ```bash
-docker rm -v $(docker ps -a -q -f status=exited) 2>&1
-docker rmi $(docker images -f "dangling=true" -q) 2>&1
+docker rm $(docker ps -a -q)
+docker rmi $(docker images -q)
 ```
 
 #### Run Image ####
