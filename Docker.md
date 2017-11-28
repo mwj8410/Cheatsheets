@@ -14,6 +14,10 @@ docker rm $(docker ps -a -q)
 docker rmi $(docker images -q)
 ```
 
+#### Clean Network ####
+Often encountered with testing or frequently failing images
+`docker network prune`
+
 #### Run Image ####
 `docker run --name <instance_name> --link <required service> --env-file ./.env.list -i -t -p 1337 <image_name>`
 
