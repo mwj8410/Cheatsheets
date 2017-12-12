@@ -28,3 +28,9 @@ run `eval "$(docker-machine env default)"`
 
 #### Kill all containers ####
 `docker rm -f $(docker ps -a -q)`
+
+#### Purge all Containers ####
+`docker rm $(docker ps -a -q)`
+
+#### Remove all Images ####
+`docker rmi $(docker images -q)`
