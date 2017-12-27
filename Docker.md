@@ -12,6 +12,7 @@
 ```bash
 docker rm $(docker ps -a -q)
 docker rmi $(docker images -q)
+docker volume rm $(docker volume ls -qf dangling=true)
 ```
 
 #### Clean Network ####
@@ -28,9 +29,3 @@ run `eval "$(docker-machine env default)"`
 
 #### Kill all containers ####
 `docker rm -f $(docker ps -a -q)`
-
-#### Purge all Containers ####
-`docker rm $(docker ps -a -q)`
-
-#### Remove all Images ####
-`docker rmi $(docker images -q)`
