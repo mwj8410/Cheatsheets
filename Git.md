@@ -70,6 +70,12 @@ Undo all local changes and reset to local repository to the state of the remote 
 git reset --hard origin/<branch>
 ```
 
+Working with a repo as a different user. This functionallyt unsets the configured user for the current repo only. All actious require manually providing the username and password.
+```
+git config --local credential.helper ""
+git push origin master
+```
+
 ## Advanced Repo Operations ##
 Stop tracking changes to a file
 ```
